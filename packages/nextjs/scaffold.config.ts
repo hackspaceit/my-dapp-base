@@ -29,7 +29,7 @@ const scaffoldConfig = {
   walletConnectProjectId: "process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID",
 
   // Only show the Burner Wallet when running on hardhat network
-  onlyLocalBurnerWallet: true,
+  onlyLocalBurnerWallet: false,
 } as const satisfies ScaffoldConfig;
 
 export default scaffoldConfig;
