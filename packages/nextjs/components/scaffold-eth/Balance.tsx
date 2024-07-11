@@ -16,7 +16,7 @@ type BalanceProps = {
 /**
  * Display (ETH & USD) balance of an ETH address.
  */
-export const Balance = ({ address, className = "", usdMode }: BalanceProps) => {
+export const Balance = ({ address, className = "ETH", usdMode }: BalanceProps) => {
   const { targetNetwork } = useTargetNetwork();
 
   const queryClient = useQueryClient();
