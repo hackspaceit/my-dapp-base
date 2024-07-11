@@ -46,7 +46,7 @@ const config: HardhatUserConfig = {
       },
     },
     base: {
-      url: "https://base-mainnet.alchemyapi.io/v2/${providerApiKey}",
+      url: `https://base-mainnet.alchemyapi.io/v2/${providerApiKey}`,
       accounts: [deployerPrivateKey],
     },
     baseSepolia: {
