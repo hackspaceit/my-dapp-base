@@ -6,12 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import { Bars3Icon, BugAntIcon } from "@heroicons/react/24/outline";
-import {
-  BaseFaucetsButton,
-  FaucetButton,
-  RainbowKitCustomConnectButton,
-  SuperchainFaucetButton,
-} from "~~/components/scaffold-eth";
+import { RainbowKitCustomConnectButton, SuperchainFaucetButton } from "~~/components/scaffold-eth";
 import { useOutsideClick } from "~~/hooks/scaffold-eth";
 
 type HeaderMenuLink = {
@@ -117,9 +112,8 @@ export const Header = () => {
       </div>
       <div className="navbar-end flex-grow mr-4">
         <RainbowKitCustomConnectButton />
-        <FaucetButton />
+
         <SuperchainFaucetButton />
-        <BaseFaucetsButton />
       </div>
     </div>
   );
