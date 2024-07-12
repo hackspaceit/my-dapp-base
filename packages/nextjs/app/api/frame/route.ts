@@ -11,7 +11,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
 
   if (idAsNumber === 3) {
     return new NextResponse(`<!DOCTYPE html><html><head>
-    <title>Optima Frame</title>
+    <title>Optima Superchain</title>
     <meta property="og:image" content="${baseUrl}/optima.jpg" />
     <meta property="fc:frame" content="vNext" />
     <meta property="fc:frame:image" content="${baseUrl}/optima.jpg" />
