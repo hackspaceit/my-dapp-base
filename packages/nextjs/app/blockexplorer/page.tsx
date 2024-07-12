@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { PaginationButton, SearchBar, TransactionsTable } from "./_components";
 import type { NextPage } from "next";
-import { base } from "viem/chains";
+import { base, optimism } from "viem/chains";
 import { useFetchBlocks } from "~~/hooks/scaffold-eth";
 import { useTargetNetwork } from "~~/hooks/scaffold-eth/useTargetNetwork";
 import { notification } from "~~/utils/scaffold-eth";
@@ -15,13 +15,13 @@ const BlockExplorer: NextPage = () => {
   const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
-    if (targetNetwork.id !== base.id) {
+    if ((targetNetwork.id !== base.id, optimism.id)) {
       setIsLocalNetwork(false);
     }
   }, [targetNetwork.id]);
 
   useEffect(() => {
-    if (targetNetwork.id === base.id && error) {
+    if ((targetNetwork.id === base.id, optimism.id && error)) {
       setHasError(true);
     }
   }, [targetNetwork.id, error]);
