@@ -20,7 +20,7 @@ const Home: NextPage = () => {
               <div className="inline-block relative w-10 h-10 align-bottom mr-2">
                 <Image alt="Base logo" className="cursor-pointer" fill src="/Base_Symbol_Blue.svg" />
               </div>
-              Scaffold-Base
+              Optima Base
             </div>
           </h1>
           <div className="flex justify-center items-center space-x-2">
@@ -28,20 +28,8 @@ const Home: NextPage = () => {
             <Address address={connectedAddress} />
           </div>
           <p className="text-center text-lg">
-            Get started by editing{" "}
-            <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
-              packages/nextjs/app/page.tsx
-            </code>
-          </p>
-          <p className="text-center text-lg">
-            Edit your smart contract{" "}
-            <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
-              YourContract.sol
-            </code>{" "}
-            in{" "}
-            <code className="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block">
-              packages/hardhat/contracts
-            </code>
+            A new toolkit for building decentralized applications and for managing smart contracts that you have built
+            on superchain networks.
           </p>
         </div>
 
