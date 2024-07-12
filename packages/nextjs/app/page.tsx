@@ -20,7 +20,7 @@ const Home: NextPage = () => {
               <div className="inline-block relative w-10 h-10 align-bottom mr-2">
                 <Image alt="Base logo" className="cursor-pointer" fill src="/Base_Symbol_Blue.svg" />
               </div>
-              Optima Base
+              Optima Superchain
             </div>
           </h1>
           <div className="flex justify-center items-center space-x-2">
