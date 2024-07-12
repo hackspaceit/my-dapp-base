@@ -41,12 +41,12 @@ const config: HardhatUserConfig = {
     // If the network you are looking for is not here you can add new network settings
     hardhat: {
       forking: {
-        url: `https://base-mainnet.alchemyapi.io/v2/${providerApiKey}`,
+        url: `https://mainnet.base.org`,
         enabled: process.env.MAINNET_FORKING_ENABLED === "true",
       },
     },
     base: {
-      url: `https://base-mainnet.alchemyapi.io/v2/${providerApiKey}`,
+      url: "https://mainnet.base.org",
       accounts: [deployerPrivateKey],
     },
     baseSepolia: {
