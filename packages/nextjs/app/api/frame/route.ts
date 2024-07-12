@@ -18,9 +18,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     <meta property="fc:frame:button:1" content="Use Toolkit" />
     <meta property="fc:frame:button:1:action" content="link" />
     <meta property="fc:frame:button:1:target" content="https://optima-tool.vercel.app/" />
-    <meta property="fc:frame:button:2" content="Restart 🔄" />
-    <meta property="fc:frame:button:2:action" content="post" />
-    <meta property="fc:frame:button:2:target" content="${baseUrl}/api/frame?id=1" />
+    
     </head></html>`);
   }
 
