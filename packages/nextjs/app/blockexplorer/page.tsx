@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { PaginationButton, SearchBar, TransactionsTable } from "./_components";
 import type { NextPage } from "next";
-import { base, optimism } from "viem/chains";
+import { base } from "viem/chains";
 import { useFetchBlocks } from "~~/hooks/scaffold-eth";
 import { useTargetNetwork } from "~~/hooks/scaffold-eth/useTargetNetwork";
 import { notification } from "~~/utils/scaffold-eth";
@@ -11,18 +11,18 @@ import { notification } from "~~/utils/scaffold-eth";
 const BlockExplorer: NextPage = () => {
   const { blocks, transactionReceipts, currentPage, totalBlocks, setCurrentPage, error } = useFetchBlocks();
   const { targetNetwork } = useTargetNetwork();
-  const [isLocalNetwork, setIsLocalNetwork] = useState(false);
+  const [isLocalNetwork, setIsLocalNetwork] = useState(true);
   const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
-    if ((targetNetwork.id !== base.id, optimism.id)) {
+    if (targetNetwork.id !== base.id) {
       setIsLocalNetwork(false);
     }
   }, [targetNetwork.id]);
 
   useEffect(() => {
-    if ((targetNetwork.id === base.id, optimism.id && error)) {
-      setHasError(false);
+    if (targetNetwork.id === base.id && error) {
+      setHasError(true);
     }
   }, [targetNetwork.id, error]);
 
@@ -31,11 +31,11 @@ const BlockExplorer: NextPage = () => {
       notification.error(
         <>
           <p className="font-bold mt-0 mb-1">
-            <code className="italic bg-base-300 text-base font-bold"> targeNetwork </code> is not localhost
+            <code className="italic bg-base-300 text-base font-bold"> targeNetwork </code> is not Base
           </p>
           <p className="m-0">
             - You are on <code className="italic bg-base-300 text-base font-bold">{targetNetwork.name}</code> .This
-            block explorer is only for <code className="italic bg-base-300 text-base font-bold">localhost</code>.
+            block explorer is only for <code className="italic bg-base-300 text-base font-bold">Base Chain</code>.
           </p>
           <p className="mt-1 break-normal">
             - You can use{" "}
