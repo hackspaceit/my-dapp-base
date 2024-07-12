@@ -15,13 +15,13 @@ const BlockExplorer: NextPage = () => {
   const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
-    if ((targetNetwork.id !== base.id, optimism.id)) {
+    if (targetNetwork.id !== base.id / optimism.id) {
       setIsLocalNetwork(false);
     }
   }, [targetNetwork.id]);
 
   useEffect(() => {
-    if ((targetNetwork.id === base.id, optimism.id && error)) {
+    if (targetNetwork.id === base.id / optimism.id && error) {
       setHasError(true);
     }
   }, [targetNetwork.id, error]);
