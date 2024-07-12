@@ -11,18 +11,18 @@ import { notification } from "~~/utils/scaffold-eth";
 const BlockExplorer: NextPage = () => {
   const { blocks, transactionReceipts, currentPage, totalBlocks, setCurrentPage, error } = useFetchBlocks();
   const { targetNetwork } = useTargetNetwork();
-  const [isLocalNetwork, setIsLocalNetwork] = useState(true);
+  const [isLocalNetwork, setIsLocalNetwork] = useState(false);
   const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
-    if (targetNetwork.id !== base.id / optimism.id) {
+    if ((targetNetwork.id !== base.id, optimism.id)) {
       setIsLocalNetwork(false);
     }
   }, [targetNetwork.id]);
 
   useEffect(() => {
-    if (targetNetwork.id === base.id / optimism.id && error) {
-      setHasError(true);
+    if ((targetNetwork.id === base.id, optimism.id && error)) {
+      setHasError(false);
     }
   }, [targetNetwork.id, error]);
 
