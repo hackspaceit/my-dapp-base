@@ -42,17 +42,17 @@ export const Address = ({ address, disableAddressLink, format, size = "base" }: 
 
   const { data: fetchedEns } = useEnsName({
     address: checkSumAddress,
-    chainId: 8453,
+    chainId: 1,
     query: {
       enabled: isAddress(checkSumAddress ?? ""),
     },
   });
   const { data: fetchedEnsAvatar } = useEnsAvatar({
     name: fetchedEns ? normalize(fetchedEns) : undefined,
-    chainId: 8453,
+    chainId: 1,
     query: {
       enabled: Boolean(fetchedEns),
-      gcTime: 30_000,
+      gcTime: 5_000,
     },
   });
 
