@@ -46,11 +46,10 @@ export const getMetadata = ({
     other: {
       "fc:frame": "vNext",
       "fc:frame:image": imageUrl,
-      "fc:frame:button:1": "Use Scaffold Base",
+      "fc:frame:button:1": "Use Toolkit",
       "fc:frame:button:1:action": "link",
-      "fc:frame:button:1:target": "https://github.com/buidlGuidl/scaffold-base",
-      "fc:frame:button:2": "Start ▶️",
-      "fc:frame:button:2:action": "post",
+      "fc:frame:button:1:target": "https://optima-tools.vercel.app/",
+
       "fc:frame:post_url": `${baseUrl}/api/frame?id=1`,
     },
   };
