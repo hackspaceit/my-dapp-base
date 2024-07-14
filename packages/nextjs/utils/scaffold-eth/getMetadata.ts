@@ -9,7 +9,7 @@ const titleTemplate = "%s | Scaffold-ETH 2";
 export const getMetadata = ({
   title,
   description,
-  imageRelativePath = "/thumbnail.jpg",
+  imageRelativePath = "/frame-1.jpg",
 }: {
   title: string;
   description: string;
@@ -46,10 +46,11 @@ export const getMetadata = ({
     other: {
       "fc:frame": "vNext",
       "fc:frame:image": imageUrl,
-      "fc:frame:button:1": "Use Toolkit",
-      "fc:frame:button:1:action": "link",
-      "fc:frame:button:1:target": "https://optima-tools.vercel.app/",
-
+      "fc:frame:button:1": "Yes",
+      "fc:frame:button:1:action": "post",
+      "fc:frame:button:1:target": "${baseUrl}/api/frame?id=1",
+      "fc:frame:button:2": "No",
+      "fc:frame:button:2:action": "post",
       "fc:frame:post_url": `${baseUrl}/api/frame?id=1`,
     },
   };

@@ -11,23 +11,25 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
 
   if (idAsNumber === 3) {
     return new NextResponse(`<!DOCTYPE html><html><head>
-    <title>Optima Superchain</title>
-    <meta property="og:image" content="${baseUrl}/optima.jpg" />
+    <title>This is frame 3</title>
+    <meta property="og:image" content="${baseUrl}/frame-3.png" />
     <meta property="fc:frame" content="vNext" />
-    <meta property="fc:frame:image" content="${baseUrl}/optima.jpg" />
-    <meta property="fc:frame:button:1" content="Use Toolkit" />
+    <meta property="fc:frame:image" content="${baseUrl}/frame-3.png" />
+    <meta property="fc:frame:button:1" content="View GitHub" />
     <meta property="fc:frame:button:1:action" content="link" />
-    <meta property="fc:frame:button:1:target" content="https://optima-tools.vercel.app/" />
-    
+    <meta property="fc:frame:button:1:target" content="https://github.com/buidlGuidl/scaffold-base" />
+    <meta property="fc:frame:button:2" content="Restart 🔄" />
+    <meta property="fc:frame:button:2:action" content="post" />
+    <meta property="fc:frame:button:2:target" content="${baseUrl}/api/frame?id=1" />
     </head></html>`);
   }
 
   return new NextResponse(`<!DOCTYPE html><html><head>
-    <title>The frame ${id}</title>
-    <meta property="og:image" content="${baseUrl}/optima.jpg" />
+    <title>This is frame ${id}</title>
+    <meta property="og:image" content="${baseUrl}/frame-2.jpg" />
     <meta property="fc:frame" content="vNext" />
-    <meta property="fc:frame:image" content="${baseUrl}/optima.jpg" />
-    <meta property="fc:frame:button:1" content="Next Page ➡️" />
+    <meta property="fc:frame:image" content="${baseUrl}/frame-${id}.png" />
+    <meta property="fc:frame:button:1" content="Donate" />
     <meta property="fc:frame:post_url" content="${baseUrl}/api/frame?id=${nextId}" />
   </head></html>`);
 }
